@@ -1,6 +1,17 @@
 'use strict';
 
 document.getElementById('hakunappi').addEventListener('click', search);
+let input = document.getElementById('pac-input');
+
+input.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("hakunappi").click();
+    }
+});
 
 let turkuurl = 'https://api.openweathermap.org/data/2.5/weather?lat=60.4518126&lon=22.2666302&appid=ecc5c5883a90cc204985b44b120ac985&units=metric&lang=fi';
 fetch(turkuurl)
@@ -60,6 +71,8 @@ function turku(result1) {
         document.getElementById('kuvaturku').src = 'img/weather/rain.png';
     } else if (desc1 == 'pieni sade') {
         document.getElementById('kuvaturku').src = 'img/weather/rain.png';
+    } else if (desc1 == 'lievä tihkusade') {
+        document.getElementById('kuvaturku').src = 'img/weather/rain.png';
     } else if (desc1 == 'ukonilma') {
         document.getElementById('kuvaturku').src = 'img/weather/thunderstorm.png';
     } else if (desc1 == 'lumisade') {
@@ -96,6 +109,8 @@ function rovaniemi(result2) {
         document.getElementById('kuvaniemi').src = 'img/weather/rain.png';
     } else if (desc2 == 'pieni sade') {
         document.getElementById('kuvaniemi').src = 'img/weather/rain.png';
+    } else if (desc2 == 'lievä tihkusade') {
+        document.getElementById('kuvaniemi').src = 'img/weather/rain.png';
     } else if (desc2 == 'ukonilma') {
         document.getElementById('kuvaniemi').src = 'img/weather/thunderstorm.png';
     } else if (desc2 == 'lumisade') {
@@ -131,6 +146,8 @@ function helsinki(result3) {
     } else if (desc3 == 'sade') {
         document.getElementById('kuvahesa').src = 'img/weather/rain.png';
     } else if (desc3 == 'pieni sade') {
+        document.getElementById('kuvahesa').src = 'img/weather/rain.png';
+    } else if (desc3 == 'lievä tihkusade') {
         document.getElementById('kuvahesa').src = 'img/weather/rain.png';
     } else if (desc3 == 'ukonilma') {
         document.getElementById('kuvahesa').src = 'img/weather/thunderstorm.png';
@@ -208,6 +225,8 @@ function showWeather(results) {
     } else if (desc == 'sade') {
         document.getElementById('kuva').src = 'img/weather/rain.png';
     } else if (desc == 'pieni sade') {
+        document.getElementById('kuva').src = 'img/weather/rain.png';
+    } else if (desc == 'lievä tihkusade') {
         document.getElementById('kuva').src = 'img/weather/rain.png';
     } else if (desc == 'ukonilma') {
         document.getElementById('kuva').src = 'img/weather/thunderstorm.png';
