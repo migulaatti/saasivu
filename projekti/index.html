@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>WIP</title>
+    <link href="https://fonts.googleapis.com/css?family=Domine:400,700|Roboto:400,700&display=swap&subset=latin-ext"
+          rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header class="page-header sumea">
+        <h1><a href="#my-tasks">WIP</a></h1>
+        <section>
+            <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+            <button id="hakunappi">Hae</button>
+        </section>
+    </header>
+    <main>
+        <section class="task" id="teht1">
+            <article class="content">
+                <header><h1>Sää</h1></header>
+                <section id="sää">
+                    <section><p>Turku:</p>
+                        <p id="turkutemp"></p>
+                        <p id="turkupilvi"></p>
+                        <img id="kuvaturku" src=""></section>
+                    <section><p>Rovaniemi:</p>
+                        <p id="rovaniemitemp"></p>
+                        <p id="rovaniemipilvi"></p>
+                        <img id="kuvaniemi" src=""></section>
+                    <section><p>Helsinki:</p>
+                        <p id="helsinkitemp"></p>
+                        <p id="helsinkipilvi"></p>
+                        <img id="kuvahesa" src=""></section>
+
+                </section>
+                <section id="säähaku">
+                    <p id="sijainti"></p>
+                    <p id="lampo"></p>
+                    <p id="feelslike"></p>
+                    <p id="pilvi"></p>
+                    <p id="pressure"></p>
+                    <p id="windspd"></p>
+                    <img id="kuva" src="">
+                </section>
+            </article>
+        </section>
+    </main>
+</div>
+<div id="map"></div>
+<script src="js/script.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVwLxWH0FhioY5cKcWo1uIHINE72w8bAo&libraries=places&callback=initAutocomplete"
+        async defer>
+
+</script>
+</body>
+</html>

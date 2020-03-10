@@ -1,0 +1,285 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#summary, #sumsum {
+    font-size: smaller;
+}
+
+#snimi, #sarjannimi {
+    font-size: 1.2em;
+}
+
+
+#sarjannimi {
+    text-align: center;
+}
+#linkki {
+    opacity: 0;
+}
+
+a {
+    color: #25d8ff;
+}
+#summary, #summary2, #haku2 {
+    display: none;
+}
+
+#sää {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+#säähaku {
+    display: flex;
+    flex-direction: row;
+    background-color: #35426e;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
+#linkki {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-left: 310px;
+}
+
+.li {
+    border: 3px solid white;
+}
+
+#lista > * {
+    display: inline-block;
+    text-align: center;
+}
+#summary2 {
+    text-align: center;
+}
+
+#teht1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+#summary {
+    border: 3px solid white;
+}
+
+h1, h2, h3 {
+    font-family: 'Domine', serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p>img {
+    display: block;
+    width: 70%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.sumea {
+    backdrop-filter: blur(1rem);
+}
+
+
+.container {
+    position: relative;
+}
+
+.page-header {
+    position: fixed;
+    width: 100%;
+    line-height: 5rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    background-color: rgba(0, 52, 89, 0.8);
+    color: #fff;
+}
+
+.page-header h1 {
+    margin: 0 1rem;
+}
+
+.page-header ul {
+    margin: 0;
+    padding: 0 1rem;
+    display: flex;
+    list-style-type: none;
+}
+
+.task {
+    min-height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgb(0, 52, 89);
+    background-blend-mode: luminosity;
+    display: flex;
+}
+
+.nappi {
+    background-color: rgb(0, 126, 167);
+    box-sizing: border-box;
+    padding: 1rem;
+    line-height: 3rem;
+}
+
+.nappi:hover {
+    background-color: rgb(0, 168, 232);
+}
+
+#teht1 {
+    //background-image: url("../bg/malmintori.jpg");
+}
+
+#haku2 {
+    text-align: center;
+}
+.content {
+    width: 50rem;
+    margin: 6rem auto;
+    background-color: rgba(0, 52, 89, 0.8);
+    color: #fff;
+}
+
+.content h1, h4 {
+    background-color: #00171F;
+    padding: 1rem;
+    margin: 0;
+}
+
+.content p {
+    padding: 1rem;
+    margin: 0;
+}
+
+#teht1 ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#teht1 li {
+    width: calc(100% / 3);
+}
+
+#teht1 figure {
+    position: relative;
+}
+
+#teht1 figure img {
+    width: 100%;
+}
+
+#teht1 figcaption {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: rgba(0,52,89,0.5);
+    margin-top: -4px;
+}
+
+#teht1 figcaption h3 {
+    margin: 0;
+}
+
+
+#map {
+    height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+
+#description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#infowindow-content .title {
+    font-weight: bold;
+}
+
+#infowindow-content {
+    display: none;
+}
+
+#map #infowindow-content {
+    display: inline;
+}
+
+.pac-card {
+    margin: 10px 10px 0 0;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    font-family: Roboto;
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+
+.pac-controls label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+#title {
+    color: #fff;
+    background-color: #4d90fe;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+#target {
+    width: 345px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
