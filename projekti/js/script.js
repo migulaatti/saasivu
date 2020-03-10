@@ -52,7 +52,6 @@ fetch(helsinkiurl)
 function turku(result1) {
     const temp1 = result1.main.temp;
     const desc1 = result1.weather[0].description;
-    //const iconurl = "http://openweathermap.org/img/w/" + results.weather.icon + ".png";
     document.getElementById('turkutemp').innerHTML = temp1 + ' °C';
     document.getElementById('turkupilvi').innerHTML = desc1;
     if (desc1 == 'taivas on selkeä') {
@@ -84,13 +83,11 @@ function turku(result1) {
     } else {
         document.getElementById('kuvaturku').src = '';
     }
-    //document.getElementById('kuva').src = iconurl;
 }
 
 function rovaniemi(result2) {
     const temp2 = result2.main.temp;
-    const desc2 = result2.weather[0].description;
-    //const iconurl = "http://openweathermap.org/img/w/" + results.weather.icon + ".png";
+    const desc2 = result2.weather[0].description
     document.getElementById('rovaniemitemp').innerHTML = temp2 + ' °C';
     document.getElementById('rovaniemipilvi').innerHTML = desc2;
     if (desc2 == 'taivas on selkeä') {
@@ -122,13 +119,11 @@ function rovaniemi(result2) {
     } else {
         document.getElementById('kuvaniemi').src = '';
     }
-    //document.getElementById('kuva').src = iconurl;
 }
 
 function helsinki(result3) {
     const temp3 = result3.main.temp;
     const desc3 = result3.weather[0].description;
-    //const iconurl = "http://openweathermap.org/img/w/" + results.weather.icon + ".png";
     document.getElementById('helsinkitemp').innerHTML = temp3 + ' °C';
     document.getElementById('helsinkipilvi').innerHTML = desc3;
     if (desc3 == 'taivas on selkeä') {
@@ -160,7 +155,6 @@ function helsinki(result3) {
     } else {
         document.getElementById('kuvahesa').src = '';
     }
-    //document.getElementById('kuva').src = iconurl;
 }
 
 function search() {
@@ -191,9 +185,6 @@ function weather(result) {
     }).catch(function(error){
         console.log(error);
     });
-    //document.getElementById('sarjannimi').innerHTML = nimi;
-    //document.getElementById('linkki').href = sivulinkki;
-    //document.getElementById('summary').innerHTML = yhtveto;
 }
 //näytetään säätiedot
 function showWeather(results) {
@@ -203,7 +194,6 @@ function showWeather(results) {
     const pressure = results.main.pressure;
     const feelslike = results.main.feels_like;
     const desc = results.weather[0].description;
-    //const iconurl = "http://openweathermap.org/img/wn/" + results.weather.icon + "@2x.png";
     document.getElementById('lampo').innerHTML = 'lämpötila: ' + temp + ' °C';
     document.getElementById('pilvi').innerHTML = desc;
     document.getElementById('windspd').innerHTML = 'tuulen nopeus: ' + wndspd + ' m/s';
@@ -239,7 +229,6 @@ function showWeather(results) {
     } else {
         document.getElementById('kuva').src = '';
     }
-    //document.getElementById('kuva').src = iconurl;
 }
 
 function initAutocomplete() {
