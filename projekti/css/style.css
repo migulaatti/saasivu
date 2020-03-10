@@ -8,6 +8,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+#hakunappi {
+    display: none;
+}
+
 #summary, #sumsum {
     font-size: smaller;
 }
@@ -110,7 +114,7 @@ p>img {
     display: flex;
     justify-content: space-between;
     z-index: 999;
-    background-color: rgba(0, 52, 89, 0.8);
+    background-color: rgba(35, 49, 89, 0.8);
     color: #fff;
 }
 
@@ -129,8 +133,9 @@ p>img {
     min-height: 100vh;
     background-size: cover;
     background-attachment: fixed;
-    background-color: rgb(0, 52, 89);
+    //background-color: rgb(55, 67, 89);
     background-blend-mode: luminosity;
+    background-image: url('../img/bg/Himmelsblau.jpg');
     display: flex;
 }
 
@@ -145,9 +150,6 @@ p>img {
     background-color: rgb(0, 168, 232);
 }
 
-#teht1 {
-    //background-image: url("../bg/malmintori.jpg");
-}
 
 #haku2 {
     text-align: center;
@@ -155,7 +157,7 @@ p>img {
 .content {
     width: 50rem;
     margin: 6rem auto;
-    background-color: rgba(0, 52, 89, 0.8);
+    //background-color: rgba(0, 52, 89, 0.8);
     color: #fff;
 }
 
@@ -193,7 +195,7 @@ p>img {
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
-    background-color: rgba(0,52,89,0.5);
+    //background-color: rgba(0,52,89,0.5);
     margin-top: -4px;
 }
 
