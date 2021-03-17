@@ -13,7 +13,7 @@ input.addEventListener("keyup", function(event) {
     }
 });
 
-let turkuurl = 'https://api.openweathermap.org/data/2.5/weather?lat=60.4518126&lon=22.2666302&appid=ecc5c5883a90cc204985b44b120ac985&units=metric&lang=fi';
+let turkuurl = 'https://api.openweathermap.org/data/2.5/weather?lat=60.4518126&lon=22.2666302&appid=<appid>&units=metric&lang=fi';
 fetch(turkuurl)
     .then(function(vastaus){
         return vastaus.json();
@@ -25,7 +25,7 @@ fetch(turkuurl)
     console.log(error);
 });
 
-let rovaniemiurl = 'https://api.openweathermap.org/data/2.5/weather?lat=66.50394779999999&lon=25.7293906&appid=ecc5c5883a90cc204985b44b120ac985&units=metric&lang=fi';
+let rovaniemiurl = 'https://api.openweathermap.org/data/2.5/weather?lat=66.50394779999999&lon=25.7293906&appid=<appid>&units=metric&lang=fi';
 fetch(rovaniemiurl)
     .then(function(vastaus){
         return vastaus.json();
@@ -37,7 +37,7 @@ fetch(rovaniemiurl)
     console.log(error);
 });
 
-let helsinkiurl = 'https://api.openweathermap.org/data/2.5/weather?lat=60.16985569999999&lon=24.9383791&appid=ecc5c5883a90cc204985b44b120ac985&units=metric&lang=fi';
+let helsinkiurl = 'https://api.openweathermap.org/data/2.5/weather?lat=60.16985569999999&lon=24.9383791&appid=<appid>&units=metric&lang=fi';
 fetch(helsinkiurl)
     .then(function(vastaus){
         return vastaus.json();
@@ -158,7 +158,7 @@ function helsinki(result3) {
 }
 
 function search() {
-    const url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodeURIComponent(document.getElementById("pac-input").value) + '&key=AIzaSyBPCxKjLbTCqZUem26OycA3xy5gfKDyat4';
+    const url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodeURIComponent(document.getElementById("pac-input").value) + '&key=<API key>';
     fetch(url) //haetaan osoitteen koordinaatit/fetches the address' coordinates
         .then(function(vastaus){
             return vastaus.json();
@@ -174,7 +174,7 @@ function search() {
 function weather(result) {
     const lng = result.results[0].geometry.location.lng;
     const lat = result.results[0].geometry.location.lat;
-    const url2 = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lng + '&appid=ecc5c5883a90cc204985b44b120ac985' + '&units=metric' + '&lang=fi';
+    const url2 = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lng + '&appid=<appid>' + '&units=metric' + '&lang=fi';
     fetch(url2)  //haetaan koordinaattien avulla sen paikan säätiedot/fetches weather data using the coordinates
         .then(function(vastaus){
             return vastaus.json();
