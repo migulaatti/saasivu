@@ -159,7 +159,7 @@ function helsinki(result3) {
 
 function search() {
     const url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + encodeURIComponent(document.getElementById("pac-input").value) + '&key=AIzaSyBPCxKjLbTCqZUem26OycA3xy5gfKDyat4';
-    fetch(url) //haetaan osoitteen koordinaatit
+    fetch(url) //haetaan osoitteen koordinaatit/fetches the address' coordinates
         .then(function(vastaus){
             return vastaus.json();
         }).then(function(json){
@@ -175,7 +175,7 @@ function weather(result) {
     const lng = result.results[0].geometry.location.lng;
     const lat = result.results[0].geometry.location.lat;
     const url2 = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lng + '&appid=ecc5c5883a90cc204985b44b120ac985' + '&units=metric' + '&lang=fi';
-    fetch(url2)  //haetaan koordinaattien avulla sen paikan säätiedot
+    fetch(url2)  //haetaan koordinaattien avulla sen paikan säätiedot/fetches weather data using the coordinates
         .then(function(vastaus){
             return vastaus.json();
         }).then(function(json){
@@ -186,7 +186,7 @@ function weather(result) {
         console.log(error);
     });
 }
-//näytetään säätiedot
+//näytetään säätiedot/show weather data
 function showWeather(results) {
     const temp = results.main.temp;
     const loc = results.name;
@@ -230,7 +230,7 @@ function showWeather(results) {
         document.getElementById('kuva').src = '';
     }
 }
-
+//google maps API code
 function initAutocomplete() {
     let map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -33.8688, lng: 151.2195},
@@ -290,6 +290,3 @@ function initAutocomplete() {
         map.fitBounds(bounds);
     });
 }
-
-//https://api.openweathermap.org/data/2.5/weather?lat=60.2&lon=25&appid=ecc5c5883a90cc204985b44b120ac985
-//https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyBPCxKjLbTCqZUem26OycA3xy5gfKDyat4
